@@ -1,9 +1,7 @@
-function PageNotFound() {
+export default function PageNotFound() {
     return (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-            <h1>Page Not Found ☹️😢</h1>
+        <div>
+            <h1>Page not found 😢</h1>
         </div>
-    )
+    );
 }
-
-export default PageNotFound
