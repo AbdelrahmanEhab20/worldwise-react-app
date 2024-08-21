@@ -4,17 +4,17 @@ import { useState } from "react";
 
 import styles from "../style/Form.module.css";
 
-export function convertToEmoji(countryCode) {
-    const codePoints = countryCode
-        .toUpperCase()
-        .split("")
-        .map((char) => 127397 + char.charCodeAt());
-    return String.fromCodePoint(...codePoints);
-}
+// export function convertToEmoji(countryCode) {
+//     const codePoints = countryCode
+//         .toUpperCase()
+//         .split("")
+//         .map((char) => 127397 + char.charCodeAt());
+//     return String.fromCodePoint(...codePoints);
+// }
 
 function Form() {
     const [cityName, setCityName] = useState("");
-    const [country, setCountry] = useState("");
+    // const [country, setCountry] = useState("");
     const [date, setDate] = useState(new Date());
     const [notes, setNotes] = useState("");
 
