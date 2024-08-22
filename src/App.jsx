@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Product from "./pages/Product";
@@ -11,55 +10,35 @@ import Form from "./components/Form";
 import CityList from "./components/CityList";
 import CountriesList from "./components/CountriesList";
 import City from "./components/City";
+import { CitiesProvider } from "./context/CitiesContext";
 
-const BASE_URL = "http://localhost:9000";
 
 function App() {
-
-  // State of the app
-  const [cities, setCities] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // get the data from the fake API
-  useEffect(() => {
-    async function fetchCitesData() {
-      try {
-        setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/cities`);
-        let data = await res.json();
-        setCities(data);
-      } catch (error) {
-        console.log(error);
-        alert("Error Fetching the data");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchCitesData();
-  }, []);
-
   return (
+
     <BrowserRouter>
-      <Routes>
-        {/*  path="/" we replaced with index  */}
-        <Route index element={<HomePage />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/login" element={<Login />} />
+      <CitiesProvider>
+        <Routes>
+          {/*  path="/" we replaced with index  */}
+          <Route index element={<HomePage />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/login" element={<Login />} />
 
-        {/* -------------------------------------- */}
-        {/* Nested ROUte with different details */}
-        <Route path="/app" element={<AppLayout />} >
-          <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
-          <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
-          <Route path="cities/:id" element={<City cities={cities} />} />
-          <Route path="countries" element={<CountriesList cities={cities} isLoading={isLoading} />} />
-          <Route path="form" element={<Form />} />
-        </Route>
-        {/* -------------------------------------- */}
+          {/* -------------------------------------- */}
+          {/* Nested ROUte with different details */}
+          <Route path="/app" element={<AppLayout />} >
+            <Route index element={<CityList />} />
+            <Route path="cities" element={<CityList />} />
+            <Route path="cities/:id" element={<City />} />
+            <Route path="countries" element={<CountriesList />} />
+            <Route path="form" element={<Form />} />
+          </Route>
+          {/* -------------------------------------- */}
 
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </CitiesProvider >
     </BrowserRouter>
   )
 }

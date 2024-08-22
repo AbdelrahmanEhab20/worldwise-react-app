@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import styles from "../style/City.module.css";
+import { useCities } from "../context/CitiesContext";
 
 const formatDate = (date) =>
     new Intl.DateTimeFormat("en", {
@@ -9,7 +10,9 @@ const formatDate = (date) =>
         weekday: "long",
     }).format(new Date(date));
 
-function City({ cities }) {
+function City() {
+    const { cities } = useCities();
+
     const { id } = useParams();
     console.log("cities")
     console.log(cities)
