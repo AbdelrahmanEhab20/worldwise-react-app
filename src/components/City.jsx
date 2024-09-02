@@ -1,6 +1,9 @@
 import { useParams } from "react-router-dom";
 import styles from "../style/City.module.css";
 import { useCities } from "../context/CitiesContext";
+import { useEffect } from "react";
+import Spinner from "./Spinner";
+import ButtonBack from "./ButtonBack";
 
 const formatDate = (date) =>
     new Intl.DateTimeFormat("en", {
@@ -11,31 +14,24 @@ const formatDate = (date) =>
     }).format(new Date(date));
 
 function City() {
-    const { cities } = useCities();
+    const { cities, isLoading, getCity, currentCity } = useCities();
 
     const { id } = useParams();
-    console.log("cities")
-    console.log(cities)
-
-
-
-    // TEMP DATA
-    let currentCity = cities.find((singleCity) => singleCity.id === id);
     console.log("currentCity")
     console.log(currentCity)
 
 
-    let { cityName, emoji, date, notes } = {
-        cityName: "Lisbon",
-        emoji: "🇵🇹",
-        date: "2027-10-31T15:59:59.138Z",
-        notes: "My favorite city so far!",
-    };;
+    // TEMP DATA
+    // let currentCity = cities.find((singleCity) => singleCity.id === id);
 
+    useEffect(() => { getCity(id) }, [id]);
+
+    let { cityName, emoji, date, notes } = currentCity;
+
+    if (isLoading) return <Spinner />
     return (
         <div className={styles.city}>
-            city {id}
-            {/* <div className={styles.row}>
+            <div className={styles.row}>
                 <h6>City name</h6>
                 <h3>
                     <span>{emoji}</span> {cityName}
@@ -63,10 +59,10 @@ function City() {
                 >
                     Check out {cityName} on Wikipedia &rarr;
                 </a>
-            </div> */}
-            {/* <div>
+            </div>
+            <div>
                 <ButtonBack />
-            </div> */}
+            </div>
         </div>
     );
 }

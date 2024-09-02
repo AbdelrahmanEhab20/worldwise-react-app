@@ -8,6 +8,7 @@ function CitiesProvider({ children }) {
   // State of the app
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [currentCity, setCurrentCity] = useState({});
 
   // get the data from the fake API
   useEffect(() => {
@@ -27,13 +28,31 @@ function CitiesProvider({ children }) {
     fetchCitesData();
   }, []);
 
+  async function getCity(id) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities/${id}`);
+      console.log("res")
+      console.log(res)
+      let data = await res.json();
+      setCurrentCity(data);
+    } catch (error) {
+      console.log(error);
+      alert("Error Fetching the data of this city");
+    } finally {
+      setIsLoading(false);
+    }
+
+  }
   return (
     <CitiesContext.Provider
       value={{
         cities,
         setCities,
         isLoading,
-        setIsLoading,
+        // setIsLoading,
+        currentCity,
+        getCity
       }}
     >
       {children}
