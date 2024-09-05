@@ -49,18 +49,6 @@
       "id": 56789123
     },
     {
-      "cityName": "New York",
-      "country": "USA",
-      "emoji": "🇺🇸",
-      "date": "2026-11-22T14:15:00.000Z",
-      "notes": "The Big Apple!",
-      "position": {
-        "lat": 40.712776,
-        "lng": -74.005974
-      },
-      "id": 34567890
-    },
-    {
       "cityName": "Rome",
       "country": "Italy",
       "emoji": "🇮🇹",
@@ -83,42 +71,6 @@
         "lng": 29.9553
       },
       "id": 89012345
-    },
-    {
-      "cityName": "Loeches",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-09-05T14:25:41.959Z",
-      "notes": "adding new city",
-      "position": {
-        "lat": "40.396764305572056",
-        "lng": "-3.4277343750000004"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Douz",
-      "country": "Tunisia",
-      "emoji": "🇹🇳",
-      "date": "2024-09-05T14:29:44.206Z",
-      "notes": "last visit to Tunisia,awsome ",
-      "position": {
-        "lat": "33.43144133557529",
-        "lng": "9.360351562500002"
-      },
-      "id": 98443202
-    },
-    {
-      "cityName": "Tripoli",
-      "country": "Libya",
-      "emoji": "🇱🇾",
-      "date": "2024-09-05T14:30:44.773Z",
-      "notes": "nice place and country",
-      "position": {
-        "lat": "32.75032260780972",
-        "lng": "13.337402343750002"
-      },
-      "id": 98443203
     }
   ]
 }

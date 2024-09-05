@@ -46,6 +46,8 @@ function CitiesProvider({ children }) {
 
   async function createCity(newCity) {
     try {
+      setIsLoading(true);
+
       const res = await fetch(`${BASE_URL}/cities`, {
         method: "POST",
         body: JSON.stringify(newCity),
@@ -61,6 +63,33 @@ function CitiesProvider({ children }) {
     } catch (error) {
       console.log("error");
       console.log(error);
+      alert("Error adding the new city data");
+
+      // dispatch({
+      //   type: "rejected",
+      //   payload: "There was an error creating the city...",
+      // });
+    } finally {
+      setIsLoading(false);
+    }
+
+  }
+
+  async function deleteCity(id) {
+    try {
+      setIsLoading(true);
+
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "Delete",
+      });
+
+      setCities(cities => cities.filter((city) => city.id !== id));
+      // dispatch({ type: "city/created", payload: data });
+    } catch (error) {
+      console.log("error");
+      console.log(error);
+      alert("Error deleting the chosen city.");
+
       // dispatch({
       //   type: "rejected",
       //   payload: "There was an error creating the city...",
@@ -79,7 +108,8 @@ function CitiesProvider({ children }) {
         // setIsLoading,
         currentCity,
         getCity,
-        createCity
+        createCity,
+        deleteCity
       }}
     >
       {children}
