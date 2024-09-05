@@ -71,6 +71,18 @@
         "lng": 29.9553
       },
       "id": 89012345
+    },
+    {
+      "cityName": "Al Fayyum",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-09-05T17:02:26.892Z",
+      "notes": "new city adding test nice",
+      "position": {
+        "lat": "29.477861195816843",
+        "lng": "30.498046875000004"
+      },
+      "id": 98443198
     }
   ]
 }
