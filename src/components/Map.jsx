@@ -12,8 +12,7 @@ function Map() {
     const [mapPosition, setMapPosition] = useState([40, 0])
     const { cities } = useCities();
     const { isLoading: isLoadingPosition, position: geoLocationPosition, getPosition } = useGeolocation();
-    const { lat: mapLat, lng: mapLng } = useUrlPosition();
-
+    const [mapLat, mapLng] = useUrlPosition();
 
     useEffect(
         function () {
@@ -21,6 +20,7 @@ function Map() {
         },
         [mapLat, mapLng]
     );
+
     useEffect(
         function () {
             if (geoLocationPosition) setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
@@ -29,7 +29,7 @@ function Map() {
     );
 
     return (
-        <div className={styles.mapContainer} onClick={() => navigate('form')}>
+        <div className={styles.mapContainer} >
             {!geoLocationPosition && <Button type={"position"} onClick={getPosition}>
                 {isLoadingPosition ? 'Loading...' : 'use your position'}
             </Button>}
@@ -63,7 +63,11 @@ function ChangeCenter({ position }) {
 function DetectClick() {
     const navigate = useNavigate();
     useMapEvent({
-        click: (ev) => navigate(`form?lat=${ev.latlng.lat}&lng=${ev.latlng.lng}`)
+        click: (ev) => {
+            console.log("ev");
+            console.log(ev);
+            navigate(`form?lat=${ev.latlng.lat}&lng=${ev.latlng.lng}`)
+        }
     })
 }
 

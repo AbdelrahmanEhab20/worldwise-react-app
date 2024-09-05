@@ -1,136 +1,124 @@
 {
-    "cities": [
-        {
-            "cityName": "Madrid",
-            "country": "Spain",
-            "emoji": "🇪🇸",
-            "date": "2027-07-15T08:22:53.976Z",
-            "notes": "",
-            "position": {
-                "lat": 40.46635901755316,
-                "lng": -3.7133789062500004
-            },
-            "id": 17806751
-        },
-        {
-            "cityName": "Cairo",
-            "country": "Egypt",
-            "emoji": "🇪🇬",
-            "date": "2027-11-11T09:00:00.000Z",
-            "notes": "The Pyramids are breathtaking!",
-            "position": {
-                "lat": 30.0444,
-                "lng": 31.2357
-            },
-            "id": 78901234
-        },
-        {
-            "cityName": "Lisbon",
-            "country": "Portugal",
-            "emoji": "🇵🇹",
-            "date": "2027-10-31T15:59:59.138Z",
-            "notes": "My favorite city so far!",
-            "position": {
-                "lat": 38.727881642324164,
-                "lng": -9.140900099907554
-            },
-            "id": 73930385
-        },
-        {
-            "cityName": "Berlin",
-            "country": "Germany",
-            "emoji": "🇩🇪",
-            "date": "2027-02-12T09:24:11.863Z",
-            "notes": "Amazing 😃",
-            "position": {
-                "lat": 52.53586782505711,
-                "lng": 13.376933665713324
-            },
-            "id": 98443197
-        },
-        {
-            "cityName": "Paris",
-            "country": "France",
-            "emoji": "🇫🇷",
-            "date": "2027-12-25T10:00:00.000Z",
-            "notes": "The city of love!",
-            "position": {
-                "lat": 48.8566,
-                "lng": 2.3522
-            },
-            "id": 56789123
-        },
-        {
-            "cityName": "Tokyo",
-            "country": "Japan",
-            "emoji": "🇯🇵",
-            "date": "2028-03-14T12:30:45.000Z",
-            "notes": "Cherry blossoms everywhere!",
-            "position": {
-                "lat": 35.682839,
-                "lng": 139.759455
-            },
-            "id": 23456789
-        },
-        {
-            "cityName": "New York",
-            "country": "USA",
-            "emoji": "🇺🇸",
-            "date": "2026-11-22T14:15:00.000Z",
-            "notes": "The Big Apple!",
-            "position": {
-                "lat": 40.712776,
-                "lng": -74.005974
-            },
-            "id": 34567890
-        },
-        {
-            "cityName": "Sydney",
-            "country": "Australia",
-            "emoji": "🇦🇺",
-            "date": "2025-05-10T16:45:00.000Z",
-            "notes": "Opera House was stunning.",
-            "position": {
-                "lat": -33.868820,
-                "lng": 151.209296
-            },
-            "id": 45678901
-        },
-        {
-            "cityName": "Cape Town",
-            "country": "South Africa",
-            "emoji": "🇿🇦",
-            "date": "2024-09-18T18:20:00.000Z",
-            "notes": "Table Mountain is a must-see.",
-            "position": {
-                "lat": -33.924869,
-                "lng": 18.424055
-            },
-            "id": 56789012
-        },
-        {
-            "cityName": "Rome",
-            "country": "Italy",
-            "emoji": "🇮🇹",
-            "date": "2027-08-03T11:30:00.000Z",
-            "notes": "The Colosseum was incredible!",
-            "position": {
-                "lat": 41.902782,
-                "lng": 12.496366
-            },
-            "id": 67890123
-        },
-        {
-            "cityName": "Alexandria",
-            "country": "Egypt",
-            "emoji": "🇪🇬",
-            "date": "2027-11-12T14:00:00.000Z",
-            "notes": "The Mediterranean at its best.",
-            "position": {
-                "lat": 31.2156,
-                "lng": 29.9553
-            },
-            "id": 89012345
-        }
-    ]
+  "cities": [
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Cairo",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2027-11-11T09:00:00.000Z",
+      "notes": "The Pyramids are breathtaking!",
+      "position": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "id": 78901234
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2027-12-25T10:00:00.000Z",
+      "notes": "The city of love!",
+      "position": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "id": 56789123
+    },
+    {
+      "cityName": "New York",
+      "country": "USA",
+      "emoji": "🇺🇸",
+      "date": "2026-11-22T14:15:00.000Z",
+      "notes": "The Big Apple!",
+      "position": {
+        "lat": 40.712776,
+        "lng": -74.005974
+      },
+      "id": 34567890
+    },
+    {
+      "cityName": "Rome",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2027-08-03T11:30:00.000Z",
+      "notes": "The Colosseum was incredible!",
+      "position": {
+        "lat": 41.902782,
+        "lng": 12.496366
+      },
+      "id": 67890123
+    },
+    {
+      "cityName": "Alexandria",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2027-11-12T14:00:00.000Z",
+      "notes": "The Mediterranean at its best.",
+      "position": {
+        "lat": 31.2156,
+        "lng": 29.9553
+      },
+      "id": 89012345
+    },
+    {
+      "cityName": "Loeches",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-09-05T14:25:41.959Z",
+      "notes": "adding new city",
+      "position": {
+        "lat": "40.396764305572056",
+        "lng": "-3.4277343750000004"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Douz",
+      "country": "Tunisia",
+      "emoji": "🇹🇳",
+      "date": "2024-09-05T14:29:44.206Z",
+      "notes": "last visit to Tunisia,awsome ",
+      "position": {
+        "lat": "33.43144133557529",
+        "lng": "9.360351562500002"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Tripoli",
+      "country": "Libya",
+      "emoji": "🇱🇾",
+      "date": "2024-09-05T14:30:44.773Z",
+      "notes": "nice place and country",
+      "position": {
+        "lat": "32.75032260780972",
+        "lng": "13.337402343750002"
+      },
+      "id": 98443203
+    }
+  ]
 }

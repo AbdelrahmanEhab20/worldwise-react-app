@@ -42,6 +42,32 @@ function CitiesProvider({ children }) {
     } finally {
       setIsLoading(false);
     }
+  }
+
+  async function createCity(newCity) {
+    try {
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log("data");
+      console.log(data);
+      setCities([...cities, data]);
+      // dispatch({ type: "city/created", payload: data });
+    } catch (error) {
+      console.log("error");
+      console.log(error);
+      // dispatch({
+      //   type: "rejected",
+      //   payload: "There was an error creating the city...",
+      // });
+    } finally {
+      setIsLoading(false);
+    }
 
   }
   return (
@@ -52,7 +78,8 @@ function CitiesProvider({ children }) {
         isLoading,
         // setIsLoading,
         currentCity,
-        getCity
+        getCity,
+        createCity
       }}
     >
       {children}
