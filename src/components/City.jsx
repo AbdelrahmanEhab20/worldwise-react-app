@@ -24,7 +24,9 @@ function City() {
     // TEMP DATA
     // let currentCity = cities.find((singleCity) => singleCity.id === id);
 
-    useEffect(() => { getCity(id) }, [id]);
+    useEffect(() => {
+        getCity(id);
+    }, [id, getCity]);
 
     let { cityName, emoji, date, notes } = currentCity;
 
