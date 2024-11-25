@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
       "cityName": "Cairo",
       "country": "Egypt",
       "emoji": "🇪🇬",
@@ -71,18 +59,6 @@
         "lng": 29.9553
       },
       "id": 89012345
-    },
-    {
-      "cityName": "Al Fayyum",
-      "country": "Egypt",
-      "emoji": "🇪🇬",
-      "date": "2024-09-05T17:02:26.892Z",
-      "notes": "new city adding test nice",
-      "position": {
-        "lat": "29.477861195816843",
-        "lng": "30.498046875000004"
-      },
-      "id": 98443198
     }
   ]
 }
