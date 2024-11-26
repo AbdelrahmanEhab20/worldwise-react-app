@@ -37,18 +37,6 @@
       "id": 56789123
     },
     {
-      "cityName": "Rome",
-      "country": "Italy",
-      "emoji": "🇮🇹",
-      "date": "2027-08-03T11:30:00.000Z",
-      "notes": "The Colosseum was incredible!",
-      "position": {
-        "lat": 41.902782,
-        "lng": 12.496366
-      },
-      "id": 67890123
-    },
-    {
       "cityName": "Alexandria",
       "country": "Egypt",
       "emoji": "🇪🇬",
@@ -59,6 +47,42 @@
         "lng": 29.9553
       },
       "id": 89012345
+    },
+    {
+      "cityName": "Horcajo-Medianero",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-11-26T11:01:08.295Z",
+      "notes": "Test",
+      "position": {
+        "lat": "40.64481752083347",
+        "lng": "-5.405198953167919"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Es Senia",
+      "country": "Algeria",
+      "emoji": "🇩🇿",
+      "date": "2024-11-26T11:01:14.154Z",
+      "notes": "erewreq",
+      "position": {
+        "lat": "35.63543121114377",
+        "lng": "-0.6152452713212654"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Tieyon",
+      "country": "Australia",
+      "emoji": "🇦🇺",
+      "date": "2024-11-26T11:03:35.486Z",
+      "notes": "TESET",
+      "position": {
+        "lat": "-27.577178042800764",
+        "lng": "133.957367228184"
+      },
+      "id": 98443200
     }
   ]
 }
